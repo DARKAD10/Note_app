@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addNote, deleteNote, updateNote } from '../app/noteSlice';
 
@@ -98,7 +98,7 @@ const AddNote = () => {
         )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {notes .filter((oneNote) =>
+          {notes.filter((oneNote) =>
       oneNote.content.toLowerCase().includes(search.toLowerCase())
     )
 
